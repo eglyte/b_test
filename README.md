@@ -8,7 +8,7 @@ This README would normally document whatever steps are necessary to get your app
 
 Build the simple holding page for Icon; artwork for desktop, tablet and phone included. No requirements on CSS or JS - use what ever you want to. Build the page however you would naturally do it.
 
-*Points to note
+* Points to note
 
 ** “Leeds starts here” is not a link
 ** Keep up to date link should open a pop up box to add a name and email address. This would link to MailChimp but this doesn’t not need to be done as part of the test.

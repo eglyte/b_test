@@ -1,0 +1,24 @@
+{
+  "name": "wearelittle-test",
+  "description": "code up a single website page from AI to HTML and CSS",
+  "main": "index.html",
+  "authors": [
+    "Egle Kreivyte"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "HTML",
+    "CSS",
+    "GULP",
+    "SASS"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
