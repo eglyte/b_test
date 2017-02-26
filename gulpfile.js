@@ -6,9 +6,9 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     pump = require('pump'),
     gulpIf = require('gulp-if'),
-    cssnano = require('gulp-cssnano'),
+    //cssnano = require('gulp-cssnano'),
+    uglifycss = require('gulp-uglifycss');
     imagemin = require('gulp-imagemin'),
-    //rev = require('gulp-rev'),
     cache = require('gulp-cache'),
     del = require('del'),
     runSequence = require('run-sequence');
@@ -46,7 +46,11 @@ gulp.task('useref', function(){
     .pipe(useref())
     // Minifies only if it's a JavaScript file
     .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulpIf('css/*.css', uglifycss({
+      "maxLineLen": 80,
+      "uglyComments": true
+    })
+    ))
     .pipe(gulp.dest('dist'))
 });
 
@@ -62,10 +66,11 @@ gulp.task('images', function(){
 gulp.task('fonts', function() {
     return gulp.src('app/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'));
-    //gulp.src('bower_components/font-awesome-sass/assets/fonts/**/*.{ttf,woff,eof,svg}*')
-    //    .pipe(gulp.dest('dist/fonts'));
-    //gulp.src('bower_components/bootstrap-sass/assets/fonts/**/*.{ttf,woff,eof,svg}*')
-    //    .pipe(gulp.dest('dist/fonts'));
+});
+
+gulp.task('videos', function() {
+    return gulp.src('app/videos/**/*')
+    .pipe(gulp.dest('dist/videos'));
 });
 
 
@@ -75,7 +80,7 @@ gulp.task('clean', function() {
 
 gulp.task('build', function (callback) {
     runSequence('clean', 
-      ['sass', 'useref', 'images', 'fonts'],
+      ['sass', 'useref', 'images', 'fonts', 'videos'],
       callback
     )
 });

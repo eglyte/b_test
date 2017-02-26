@@ -1,20 +1,11 @@
 (function($) {
-    function windowSize() {
-        windowHeight = window.innerHeight ? window.innerHeight : $(window).height();
-        windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
-    }
-    windowSize();
 
-    function jumbotron() {
-    	var $footerHeight = $( '.site-footer' ).height();
-    	$( ".jumbotron" ).css( "height", $( window ).height()-$footerHeight);
-    	console.log($footerHeight);
-    }
-    //jumbotron(); 
-
-    $( window ).resize(function() {
-		//jumbotron();  		
-    });
+    $('#videoModal').on('shown.bs.modal', function () {
+        $('#presentationVideo')[0].play();
+    })
+    $('#videoModal').on('hidden.bs.modal', function () {
+        $('#presentationVideo')[0].pause();
+    })
     
 
 })(jQuery);

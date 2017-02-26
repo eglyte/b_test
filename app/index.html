@@ -1,66 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>iCON</title>
-	<!--build:css css/styles.min.css-->
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<!-- endbuild -->
+    <title>iCON</title>
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- endbuild -->
 </head>
-<body>
-	<div class="site-content">
-		<div class="jumbotron">
-			<div class="container">
-				<div class="logo">
-					<img src="images/icon_logo.svg" alt="iCon">
-				</div>
-				<h1>Leeds starts <span>here.</span></h1>
-				<p class="play-video">Play video</p>
-			</div>
-		</div>
-		<div class="main-content">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-md-8">
-						<h2>Partners</h2>
-						<div class="row">
-							<div class="col-md-4 offset-md-0 col-sm-6 offset-sm-3">
-								<img src="images/munroek_logo.svg" alt="munroek" class="img-fluid">
-							</div>
-							<div class="col-md-4 offset-md-0 col-sm-6 offset-sm-3">
-								<img src="images/schroders_logo.png" alt="schroders" class="img-fluid">
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 hidden-md-down">
-						<h2>About</h2>
-						<p>72 acres of inspirational space where life and work come together seamlessly, where the brightest minds of today come together to solve the problems of tomorrow.</p>
-						<p><a href="#" class="btn">Keep up to date</a></p>
-					</div>
-					<div class="col-lg-2 col-md-4">
-						<h2>Contact</h2>
-						<p>David Aspin<br />
-						<a href="mailto:daspin@munroek.co.uk">daspin@munroek.co.uk</a><br />
-						+44 (0)113 387 7774</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<footer class="site-footer">
-		<div class="container">
-			<p>
-				<span class="copyright">© 2017 Icon</span>   |   <span class="developed-by">Website by <a href="#">Little</a></span>
-			</p>
-		</div>
-	</footer>
 
-<!-- scripts only for testing gulp minification -->
-<!--build:js js/main.min.js -->
-<script src="js/jquery.min.js"></script>
-<script src="js/main.js"></script>
-<!-- endbuild -->	
+<body>
+    <div class="site-content">
+        <div class="jumbotron">
+            <div class="container">
+                <div class="logo">
+                    <img src="images/icon_logo.svg" alt="iCon">
+                </div>
+                <h1>Leeds starts <span>here.</span></h1>
+                <p class="play-video" data-toggle="modal" data-target="#videoModal">Play video</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8">
+                        <h2>Partners</h2>
+                        <div class="row">
+                            <div class="col-md-4 offset-md-0 col-sm-6 offset-sm-3 offset-2 col-8">
+                                <img src="images/munroek_logo.svg" alt="munroek" class="img-fluid">
+                            </div>
+                            <div class="col-md-4 offset-md-0 col-sm-6 offset-sm-3 offset-2 col-8">
+                                <img src="images/schroders_logo.png" alt="schroders" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 hidden-md-down">
+                        <h2>About</h2>
+                        <p>72 acres of inspirational space where life and work come together seamlessly, where the brightest minds of today come together to solve the problems of tomorrow.</p>
+                        <p>
+                            <div class="btn btn-newsletter" data-toggle="modal" data-target="#myModal">Keep up to date</div>
+                        </p>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                        <h2>Contact</h2>
+                        <p>David Aspin
+                            <br />
+                            <a href="mailto:daspin@munroek.co.uk">daspin@munroek.co.uk</a>
+                            <br /> +44 (0)113 387 7774</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                <span class="copyright">© 2017 Icon</span> | <span class="developed-by">Website by <a href="#">Little</a></span>
+            </p>
+        </div>
+    </footer>
+    <!-- modals -->
+    <!-- video modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video controls="" class="embed-responsive-item" id="presentationVideo" poster="">
+                            <source src="videos/Icon_Presentation.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- form modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Keep up to date</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="inputEmail" class="sr-only">Email address</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputName" class="sr-only">Name</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Enter Name">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- build:js js/main.min.js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>

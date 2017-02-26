@@ -21,11 +21,11 @@
 //@import "code";
 @import "../../bower_components/bootstrap/scss/grid";
 //@import "tables";
-//@import "forms";
+@import "../../bower_components/bootstrap/scss/forms";
 //@import "buttons";
 
 // Components
-//@import "transitions";
+@import "../../bower_components/bootstrap/scss/transitions";
 //@import "dropdown";
 //@import "button-group";
 //@import "input-group";
@@ -41,11 +41,11 @@
 //@import "progress";
 //@import "media";
 //@import "list-group";
-//@import "responsive-embed";
-//@import "close";
+@import "../../bower_components/bootstrap/scss/responsive-embed";
+@import "../../bower_components/bootstrap/scss/close";
 
 // Components w/ JavaScript
-//@import "modal";
+@import "../../bower_components/bootstrap/scss/modal";
 //@import "tooltip";
 //@import "popover";
 //@import "carousel";
