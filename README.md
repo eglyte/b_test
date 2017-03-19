@@ -6,7 +6,7 @@ This README would normally document whatever steps are necessary to get your app
 
 * Quick summary
 
-Build the simple holding page for Icon; artwork for desktop, tablet and phone included. No requirements on CSS or JS - use what ever you want to. Build the page however you would naturally do it.
+Build the simple holding page for Icon. No requirements on CSS or JS.
 
 * Points to note
 
@@ -15,11 +15,3 @@ Build the simple holding page for Icon; artwork for desktop, tablet and phone in
 ** Play Video should open video in a pop up box (auto play maybe?) This could run locally or use a streaming service. 
 ** Background image - would be nice to be an image carousel which fades between the supplied images
 ** At desktop size it would be nice for the site to fill the viewport size then scroll at smaller screen sizes.
-
-* Version 1.0.0
-* [Technical test assets](https://www.dropbox.com/sh/05c0x0rxbf6nvd1/AAC8goFNPg8wUPu3yVxpSq7ia?dl=0)
-
-
-### Who do I talk to? ###
-
-* [Egle Kreivyte](eglytep@gmail.com)

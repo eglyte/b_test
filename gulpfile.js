@@ -6,7 +6,6 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     pump = require('pump'),
     gulpIf = require('gulp-if'),
-    //cssnano = require('gulp-cssnano'),
     uglifycss = require('gulp-uglifycss');
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
